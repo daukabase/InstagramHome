@@ -10,13 +10,18 @@ import UIKit
 
 class ActionsView: UIView {
     
-    private enum Constants {
+    fileprivate enum Constants {
         static let likeSize = CGSize(width: 32, height: 32)
+        static let likeImage = UIImage(named: "like")
+        static let dislikeImage = UIImage(named: "dislike")
+        static let likeTag = 1
+        static let dislikeTag = 0
     }
     
     lazy var likeButton: UIButton = {
         let button = UIButton(frame: .zero)
-        
+        button.setImage(Constants.likeImage, for: .normal)
+        button.addTarget(self, action: #selector(likeButtonDidiClicked), for: .touchUpInside)
         return button
     }()
     
@@ -29,8 +34,25 @@ class ActionsView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func set(isLiked: Bool) {
+        likeButton.tag = isLiked ? Constants.likeTag : Constants.dislikeTag
+    }
+    
+    @objc
+    func likeButtonDidiClicked() {
+        likeButton.toogle()
+        upadteUI()
+    }
+    
+    private func upadteUI() {
+        if likeButton.isLiked {
+            likeButton.setImage(Constants.dislikeImage, for: .normal)
+        } else {
+            likeButton.setImage(Constants.likeImage, for: .normal)
+        }
+    }
+    
 }
-
 
 private extension ActionsView {
     
@@ -48,6 +70,22 @@ private extension ActionsView {
             make.size.equalTo(Constants.likeSize)
             make.centerY.equalTo(self)
             make.left.equalTo(16)
+        }
+    }
+    
+}
+
+private extension UIButton {
+    
+    var isLiked: Bool {
+        return tag == ActionsView.Constants.likeTag
+    }
+    
+    func toogle() {
+        if tag == ActionsView.Constants.likeTag {
+            tag = ActionsView.Constants.dislikeTag
+        } else {
+            tag = ActionsView.Constants.likeTag
         }
     }
     
