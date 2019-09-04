@@ -16,6 +16,7 @@ final class HomeViewController: UIViewController {
         let tableView = UITableView(frame: .zero)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(PostCell.self, forCellReuseIdentifier: PostCell.reuseIdentifier)
         
         return tableView
     }()
@@ -33,7 +34,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: PostCell.reuseIdentifier, for: indexPath) as! PostCell
+        
+        return cell
     }
     
     

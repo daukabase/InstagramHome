@@ -15,6 +15,7 @@
 		B0094F18231FE40300E407F2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0094F17231FE40300E407F2 /* Post.swift */; };
 		B0094F1B231FE4A500E407F2 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0094F1A231FE4A500E407F2 /* PostCell.swift */; };
 		B0094F1D231FE69E00E407F2 /* UserDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0094F1C231FE69E00E407F2 /* UserDescriptionView.swift */; };
+		B0094F1F231FE89D00E407F2 /* ActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0094F1E231FE89D00E407F2 /* ActionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B0094F17231FE40300E407F2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B0094F1A231FE4A500E407F2 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B0094F1C231FE69E00E407F2 /* UserDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDescriptionView.swift; sourceTree = "<group>"; };
+		B0094F1E231FE89D00E407F2 /* ActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsView.swift; sourceTree = "<group>"; };
 		C239EF52C0A2979868552D59 /* Pods_InstagramHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5203BC9FD573852448F0DD2 /* Pods-InstagramHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramHome.debug.xcconfig"; path = "Target Support Files/Pods-InstagramHome/Pods-InstagramHome.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +140,7 @@
 			children = (
 				B0094F1A231FE4A500E407F2 /* PostCell.swift */,
 				B0094F1C231FE69E00E407F2 /* UserDescriptionView.swift */,
+				B0094F1E231FE89D00E407F2 /* ActionsView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				B0094F18231FE40300E407F2 /* Post.swift in Sources */,
 				B0094EFF231FE25B00E407F2 /* AppDelegate.swift in Sources */,
 				B0094F15231FE3B900E407F2 /* HomeViewController.swift in Sources */,
+				B0094F1F231FE89D00E407F2 /* ActionsView.swift in Sources */,
 				B0094F1B231FE4A500E407F2 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

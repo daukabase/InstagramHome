@@ -13,13 +13,13 @@ final class PostCell: UITableViewCell {
     
     static let reuseIdentifier = String(describing: PostCell.self)
     
-    private lazy var userDescription: UIView = {
-        let view = UIView(frame: .zero)
+    private lazy var userDescription: UserDescriptionView = {
+        let view = UserDescriptionView(frame: .zero)
         return view
     }()
     
-    private lazy var postImageView: UIView = {
-        let imageView = UIView(frame: .zero)
+    private lazy var postImageView: UIImageView = {
+        let imageView = UIImageView(frame: .zero)
         
         return imageView
     }()
