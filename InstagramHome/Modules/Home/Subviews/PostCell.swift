@@ -60,6 +60,14 @@ final class PostCell: UITableViewCell {
         userDescription.nicknameLabel.text = post.authorNickname
         userDescription.avatarImageView.image = post.authorAvatarImage
         actionsView.set(isLiked: false)
+        
+        guard let cropRatio = post.postImage?.cropRatio else {
+            return
+        }
+        
+        postImageView.snp.makeConstraints { (make) in
+            make.height.equalTo(UIScreen.main.bounds.width / cropRatio)
+        }
     }
     
 }
@@ -100,6 +108,14 @@ private extension PostCell {
             make.right.equalTo(self).offset(-16)
             make.top.equalTo(actionsView.snp.bottom)
         }
+    }
+    
+}
+
+private extension UIImage {
+    
+    var cropRatio: CGFloat {
+        return size.width / size.height
     }
     
 }
