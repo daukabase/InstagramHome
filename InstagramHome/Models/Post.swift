@@ -6,7 +6,7 @@
 //  Copyright © 2019 daukabase. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Post {
     let authorNickname: String
