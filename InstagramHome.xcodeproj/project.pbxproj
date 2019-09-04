@@ -13,6 +13,7 @@
 		B0094F09231FE25C00E407F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0094F07231FE25C00E407F2 /* LaunchScreen.storyboard */; };
 		B0094F15231FE3B900E407F2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0094F14231FE3B900E407F2 /* HomeViewController.swift */; };
 		B0094F18231FE40300E407F2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0094F17231FE40300E407F2 /* Post.swift */; };
+		B0094F1B231FE4A500E407F2 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0094F1A231FE4A500E407F2 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B0094F0A231FE25C00E407F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0094F14231FE3B900E407F2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B0094F17231FE40300E407F2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B0094F1A231FE4A500E407F2 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		C239EF52C0A2979868552D59 /* Pods_InstagramHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5203BC9FD573852448F0DD2 /* Pods-InstagramHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramHome.debug.xcconfig"; path = "Target Support Files/Pods-InstagramHome/Pods-InstagramHome.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				B0094F14231FE3B900E407F2 /* HomeViewController.swift */,
+				B0094F19231FE49500E407F2 /* Subviews */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -126,6 +129,14 @@
 				B0094F17231FE40300E407F2 /* Post.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B0094F19231FE49500E407F2 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				B0094F1A231FE4A500E407F2 /* PostCell.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 				B0094F18231FE40300E407F2 /* Post.swift in Sources */,
 				B0094EFF231FE25B00E407F2 /* AppDelegate.swift in Sources */,
 				B0094F15231FE3B900E407F2 /* HomeViewController.swift in Sources */,
+				B0094F1B231FE4A500E407F2 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
