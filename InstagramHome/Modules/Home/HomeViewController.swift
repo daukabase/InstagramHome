@@ -14,19 +14,23 @@ final class HomeViewController: UIViewController {
         Post(authorNickname: "almagambetoff",
              authorAvatarImage: UIImage(named: "ava"),
              postImage: UIImage(named: "i1"),
-             postContentText: "Text1"),
+             postContentText: "Much of what I stumbled into by following my curiosity and intuition turned out to be priceless later on"),
         Post(authorNickname: "almagambetoff",
              authorAvatarImage: UIImage(named: "ava"),
              postImage: UIImage(named: "i2"),
-             postContentText: "Text1"),
+             postContentText: "Of course it was impossible to connect the dots looking forward when I was in college. But it was very, very clear looking backwards ten years later"),
         Post(authorNickname: "almagambetoff",
              authorAvatarImage: UIImage(named: "ava"),
              postImage: UIImage(named: "i3"),
-             postContentText: "Text1"),
+             postContentText: "But something slowly began to dawn on me — I still loved what I did. I had been rejected, but I was still in love. And so I decided to start over"),
         Post(authorNickname: "almagambetoff",
              authorAvatarImage: UIImage(named: "ava"),
              postImage: UIImage(named: "i4"),
-             postContentText: "Text1")
+             postContentText: "Stay Hungry. Stay Foolish"),
+        Post(authorNickname: "almagambetoff",
+             authorAvatarImage: UIImage(named: "ava"),
+             postImage: UIImage(named: "i5"),
+             postContentText: "Your time is limited, so don’t waste it living someone else’s life")
     ]
     
     lazy var tableView: UITableView = {

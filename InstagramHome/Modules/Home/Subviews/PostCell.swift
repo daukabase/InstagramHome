@@ -18,8 +18,16 @@ final class PostCell: UITableViewCell {
         return view
     }()
     
-    private lazy var postImageView: UIImageView = {
-        let imageView = UIImageView(frame: .zero)
+    private lazy var postImageView: LikeableImageView = {
+        let imageView = LikeableImageView(frame: .zero)
+        
+        imageView.isUserInteractionEnabled = true
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.onLike = { [weak self] in
+            self?.actionsView.set(isLiked: true)
+        }
         
         return imageView
     }()
@@ -51,6 +59,7 @@ final class PostCell: UITableViewCell {
         contentLabel.text = post.postContentText
         userDescription.nicknameLabel.text = post.authorNickname
         userDescription.avatarImageView.image = post.authorAvatarImage
+        actionsView.set(isLiked: false)
     }
     
 }
@@ -60,6 +69,7 @@ private extension PostCell {
     func commonInit() {
         setupSubviews()
         setupConstraints()
+        selectionStyle = .none
     }
     
     func setupSubviews() {

@@ -11,7 +11,7 @@ import UIKit
 class ActionsView: UIView {
     
     fileprivate enum Constants {
-        static let likeSize = CGSize(width: 32, height: 32)
+        static let likeSize = CGSize(width: 22, height: 22)
         static let likeImage = UIImage(named: "like")
         static let dislikeImage = UIImage(named: "dislike")
         static let likeTag = 1
@@ -36,22 +36,37 @@ class ActionsView: UIView {
     
     func set(isLiked: Bool) {
         likeButton.tag = isLiked ? Constants.likeTag : Constants.dislikeTag
+        upadteUI()
     }
     
     @objc
-    func likeButtonDidiClicked() {
+    private func likeButtonDidiClicked() {
         likeButton.toogle()
         upadteUI()
     }
     
     private func upadteUI() {
         if likeButton.isLiked {
-            likeButton.setImage(Constants.dislikeImage, for: .normal)
-        } else {
             likeButton.setImage(Constants.likeImage, for: .normal)
+        } else {
+            likeButton.setImage(Constants.dislikeImage, for: .normal)
         }
+        animate()
     }
     
+    private func animate() {
+        likeButton.transform = transform.scaledBy(x: 0.6, y: 0.6)
+        
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.35,
+                       initialSpringVelocity: 0.2,
+                       options: .curveEaseOut,
+                       animations: {
+                           self.likeButton.transform = CGAffineTransform.identity
+                       },
+                       completion: nil)
+    }
 }
 
 private extension ActionsView {
