@@ -10,7 +10,7 @@ import UIKit
 
 struct Post {
     let authorNickname: String
-    let authorAvatarImage: UIImage
-    let postImage: UIImage
+    let authorAvatarImage: UIImage?
+    let postImage: UIImage?
     let postContentText: String
 }

@@ -24,8 +24,8 @@ final class PostCell: UITableViewCell {
         return imageView
     }()
     
-    private lazy var actionsView: UIView = {
-        let view = UIView()
+    private lazy var actionsView: ActionsView = {
+        let view = ActionsView()
         
         return view
     }()
@@ -46,6 +46,12 @@ final class PostCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configureCell(for post: Post) {
+        postImageView.image = post.postImage
+        contentLabel.text = post.postContentText
+        userDescription.nicknameLabel.text = post.authorNickname
+        userDescription.avatarImageView.image = post.authorAvatarImage
+    }
     
 }
 

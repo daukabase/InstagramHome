@@ -17,6 +17,8 @@ class UserDescriptionView: UIView {
     lazy var avatarImageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = Constants.imageViewSize.height / 2
+        imageView.contentMode = .scaleAspectFill
         
         return imageView
     }()

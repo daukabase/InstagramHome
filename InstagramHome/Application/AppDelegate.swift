@@ -17,10 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
+        setup(window)
         
         return true
     }
 
+    
+    private func setup(_ window: UIWindow?) {
+        window?.backgroundColor = .white
+        window?.layer.cornerRadius = 10
+        window?.layer.masksToBounds = true
+        window?.makeKeyAndVisible()
+        window?.rootViewController = HomeViewController()
+    }
 
 }
 
